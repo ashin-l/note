@@ -68,7 +68,7 @@ $totalamount = $totalamount * (1+$taxrate);
         }
         $fp = fopen("$document_root/../orders/orders.txt", 'ab');
         $outputstring = $date . "\t" . $tireqty . " tires \t" . $oilqty . " oil\t"
-                        . $sparkqty . " spark plugs\t\$" . $totalamount
+                        . $sparkqty . " spark plugs\t\$" . number_format($totalamount, 2)
                         . "\t" . $address . "\n";
         flock($fp, LOCK_EX);
         fwrite($fp, $outputstring, strlen($outputstring));
