@@ -26,7 +26,7 @@ background: #ccccff;
 
 <?php
 $orders = file("$document_root/../orders/orders.txt");
-$nember_of_orders = count($orders);
+$number_of_orders = count($orders);
 
 if ($number_of_orders == 0) {
     echo "<p><strong>No orders pending.<br />
@@ -40,6 +40,7 @@ echo "<tr>
         <th>Oil</th>
         <th>Spark Plugs</th>
         <th>Total</th>
+        <th>Addr</th>
         </tr>";
 
 for ($i = 0; $i < $number_of_orders; $i++) {
